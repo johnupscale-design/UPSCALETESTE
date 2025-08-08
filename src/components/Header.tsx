@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
+  // Removido o estado do modal
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -26,11 +29,21 @@ const Header = () => {
           <Button variant="ghost" className="hidden sm:inline-flex">
             Entrar
           </Button>
-          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            Começar Grátis
+          <Button
+            className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            asChild
+          >
+            <a
+              href="https://links.upscale.vu/widget/survey/oxeRZfpDcbB0zapaYqHl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Começar Grátis
+            </a>
           </Button>
         </div>
       </div>
+      {/* Modal removido, formulário abre em nova aba */}
     </header>
   );
 };
