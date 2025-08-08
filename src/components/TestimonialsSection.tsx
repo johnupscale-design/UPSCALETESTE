@@ -1,8 +1,80 @@
+
+
+import { useRef, useEffect } from "react";
 import { Star } from "lucide-react";
 import anaImage from "@/assets/testimonial-ana.jpg";
 import joaoImage from "@/assets/testimonial-joao.jpg";
 
+const testimonials = [
+  {
+    name: "Ana Paula",
+    image: anaImage,
+    text: "A Upscale me deu um website profissional e um assistente virtual que mudou meu jogo. Minhas reservas triplicaram!",
+    role: "Proprietária do Salão Pura Beleza",
+  },
+  {
+    name: "João Silva",
+    image: joaoImage,
+    text: "O chatbot com IA é um diferencial enorme. Meus clientes adoram e eu consigo focar no atendimento. Recomendo muito!",
+    role: "Studio Mãos de Ouro",
+  },
+  {
+    name: "Marina Souza",
+    image: anaImage,
+    text: "A automação da Upscale facilitou minha rotina. Agora tenho mais tempo para meus clientes e menos preocupação com agendamentos.",
+    role: "Barbearia Estilo Livre",
+  },
+  {
+    name: "Carlos Mendes",
+    image: joaoImage,
+    text: "Nunca foi tão fácil organizar minha agenda. O sistema é intuitivo e meus clientes elogiam a praticidade.",
+    role: "Salão Top Hair",
+  },
+  {
+    name: "Pedro Lima",
+    image: anaImage,
+    text: "A equipe de suporte da Upscale é sensacional! Sempre que precisei, fui atendido rapidamente. Estou muito satisfeito.",
+    role: "Barbearia Lima",
+  },
+];
+
+
+// Duplicar depoimentos para efeito de loop
+const carouselTestimonials = [...testimonials, ...testimonials];
+
 const TestimonialsSection = () => {
+  const carouselRef = useRef<HTMLUListElement>(null);
+
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+    
+    let animationFrame: number;
+    const speed = 1; // px por frame (aumentei a velocidade)
+
+    function animate() {
+      // Quando chegar na metade do scroll (onde os depoimentos duplicados começam)
+      if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+        // Volta para o início sem interrupção visual
+        carousel.scrollLeft = 0;
+      } else {
+        // Continue rolando
+        carousel.scrollLeft += speed;
+      }
+      animationFrame = requestAnimationFrame(animate);
+    }
+    
+    // Inicia a animação
+    animationFrame = requestAnimationFrame(animate);
+    
+    // Cleanup
+    return () => {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+    };
+  }, []);
+
   return (
     <section id="testimonials" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -14,53 +86,52 @@ const TestimonialsSection = () => {
             </span>
           </h2>
         </div>
-
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="bg-card p-8 rounded-2xl border shadow-lg">
-            <div className="flex items-center mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-              ))}
-            </div>
-            <blockquote className="text-lg mb-6">
-              "A Upscale me deu um website profissional e um assistente virtual que mudou meu jogo. 
-              Minhas reservas triplicaram!"
-            </blockquote>
-            <div className="flex items-center">
-              <img
-                src={anaImage}
-                alt="Ana Paula"
-                className="w-12 h-12 rounded-full mr-4 object-cover"
-              />
-              <div>
-                <div className="font-semibold">Ana Paula</div>
-                <div className="text-sm text-muted-foreground">Proprietária do Salão Pura Beleza</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-card p-8 rounded-2xl border shadow-lg">
-            <div className="flex items-center mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-              ))}
-            </div>
-            <blockquote className="text-lg mb-6">
-              "O chatbot com IA é um diferencial enorme. Meus clientes adoram e eu consigo focar no atendimento. 
-              Recomendo muito!"
-            </blockquote>
-            <div className="flex items-center">
-              <img
-                src={joaoImage}
-                alt="João Silva"
-                className="w-12 h-12 rounded-full mr-4 object-cover"
-              />
-              <div>
-                <div className="font-semibold">João Silva</div>
-                <div className="text-sm text-muted-foreground">Studio Mãos de Ouro</div>
-              </div>
-            </div>
-          </div>
+        <div className="relative max-w-5xl mx-auto overflow-hidden">
+          <ul
+            ref={carouselRef}
+            className="flex gap-8 no-scrollbar"
+            style={{ 
+              scrollBehavior: "unset",
+              WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
+              maskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)"
+            }}
+          >
+            {carouselTestimonials.map((t, idx) => (
+              <li key={idx} className="min-w-[340px] max-w-[340px] flex-shrink-0 py-2">
+                <div className="bg-card p-6 rounded-2xl border shadow-lg h-full flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center mb-4">
+                      <img
+                        src={t.image}
+                        alt={t.name}
+                        className="w-12 h-12 rounded-full mr-4 object-cover"
+                      />
+                      <div>
+                        <div className="font-semibold text-base">{t.name}</div>
+                        <div className="text-sm text-muted-foreground">{t.role}</div>
+                      </div>
+                    </div>
+                    <blockquote className="text-base mb-4 leading-relaxed">"{t.text}"</blockquote>
+                  </div>
+                  <div className="flex items-center">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <style>{`
+            .no-scrollbar {
+              -ms-overflow-style: none;
+              scrollbar-width: none;
+              overflow: hidden;
+            }
+            .no-scrollbar::-webkit-scrollbar {
+              display: none;
+            }
+          `}</style>
         </div>
       </div>
     </section>
