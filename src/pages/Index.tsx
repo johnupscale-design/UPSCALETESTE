@@ -5,6 +5,7 @@ import FeaturesSection from "@/components/FeaturesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import PricingSection from "@/components/PricingSection";
 import CtaSection from "@/components/CtaSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -34,6 +35,10 @@ const Index = () => {
       {/* ===== 6. SEÇÃO DE CTA FINAL ===== */}
       {/* Chamada para ação de fechamento */}
       <CtaSection />
+      
+      {/* ===== 7. RODAPÉ ===== */}
+      {/* Informações da empresa, links e contato */}
+      <Footer />
     </div>
   );
 };
