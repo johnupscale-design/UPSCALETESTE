@@ -76,8 +76,11 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
+    /* ===== SEÇÃO DE DEPOIMENTOS ===== */
+    /* Contém: Carrossel de depoimentos de clientes satisfeitos */
     <section id="testimonials" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
+        {/* Título da Seção */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold mb-6">
             A voz de quem já está{" "}
@@ -86,6 +89,7 @@ const TestimonialsSection = () => {
             </span>
           </h2>
         </div>
+        {/* Carrossel Automático de Depoimentos */}
         <div className="relative max-w-5xl mx-auto overflow-hidden">
           <ul
             ref={carouselRef}

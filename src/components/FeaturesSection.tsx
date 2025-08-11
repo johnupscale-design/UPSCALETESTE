@@ -3,8 +3,11 @@ import { Globe, Bot, Zap, Smartphone, Clock, Shield } from "lucide-react";
 
 const FeaturesSection = () => {
   return (
+    /* ===== SEÇÃO DE DETALHAMENTO DAS FUNCIONALIDADES ===== */
+    /* Contém: Três blocos principais de funcionalidades detalhadas */
     <section id="features" className="py-20">
       <div className="container mx-auto px-4">
+        {/* Título da Seção */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold mb-6">
             Os recursos que só a{" "}
@@ -15,8 +18,9 @@ const FeaturesSection = () => {
           </h2>
         </div>
 
+        {/* Container das Funcionalidades Detalhadas */}
         <div className="space-y-24">
-          {/* Smart Website Feature */}
+          {/* FUNCIONALIDADE 1: Smart Website */}
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
@@ -69,7 +73,7 @@ const FeaturesSection = () => {
             </div>
           </div>
 
-          {/* AI Chatbot Feature */}
+          {/* FUNCIONALIDADE 2: Inteligência Artificial */}
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="lg:order-2">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
@@ -119,7 +123,7 @@ const FeaturesSection = () => {
             </div>
           </div>
 
-          {/* Speed Feature */}
+          {/* FUNCIONALIDADE 3: Agilidade Máxima */}
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">

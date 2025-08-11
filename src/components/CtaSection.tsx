@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 
 const CtaSection = () => {
   return (
+    /* ===== SEÇÃO DE CTA FINAL ===== */
+    /* Contém: Chamada para ação final do site */
     <section className="py-20 bg-gradient-to-br from-primary to-accent text-primary-foreground">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl lg:text-5xl font-bold mb-6">

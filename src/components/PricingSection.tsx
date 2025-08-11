@@ -3,8 +3,11 @@ import { Check } from "lucide-react";
 
 const PricingSection = () => {
   return (
+    /* ===== SEÇÃO DE PLANOS E PREÇOS ===== */
+    /* Contém: Três cartões de planos (Gratuito, Pro, Enterprise) */
     <section id="pricing" className="py-20">
       <div className="container mx-auto px-4">
+        {/* Título da Seção */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold mb-6">
             Escolha o plano ideal para o seu{" "}
@@ -17,8 +20,9 @@ const PricingSection = () => {
           </p>
         </div>
 
+        {/* Grade de Cartões de Planos */}
         <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Plano Gratuito */}
+          {/* PLANO 1: Gratuito */}
           <div className="bg-card p-8 rounded-2xl border">
             <h3 className="text-2xl font-bold mb-2">Plano Gratuito</h3>
             <p className="text-muted-foreground mb-6">Ideal para quem está começando</p>
@@ -47,7 +51,7 @@ const PricingSection = () => {
             <Button className="w-full">Começar Grátis</Button>
           </div>
 
-          {/* Plano Pro */}
+          {/* PLANO 2: Pro (Mais Popular) */}
           <div className="bg-gradient-to-br from-primary to-accent p-[2px] rounded-2xl relative">
             <div className="bg-card p-8 rounded-2xl h-full">
               <div className="text-center mb-4">
@@ -89,7 +93,7 @@ const PricingSection = () => {
             </div>
           </div>
 
-          {/* Plano Enterprise */}
+          {/* PLANO 3: Enterprise */}
           <div className="bg-card p-8 rounded-2xl border">
             <h3 className="text-2xl font-bold mb-2">Plano Enterprise</h3>
             <p className="text-muted-foreground mb-6">Solução completa para grandes redes</p>

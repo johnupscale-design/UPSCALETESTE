@@ -2,8 +2,11 @@ import { Calendar, Users, TrendingUp } from "lucide-react";
 
 const ProblemSolutionSection = () => {
   return (
+    /* ===== SEÇÃO DE PROBLEMA E SOLUÇÃO ===== */
+    /* Contém: Apresentação do problema e os três pilares de solução */
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
+        {/* Apresentação do Problema Central */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold mb-6">
             O seu negócio merece crescer.{" "}
@@ -18,7 +21,9 @@ const ProblemSolutionSection = () => {
           </p>
         </div>
 
+        {/* Três Pilares de Solução */}
         <div className="grid md:grid-cols-3 gap-8">
+          {/* Pilar 1: Agendamento Inteligente */}
           <div className="text-center group">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary to-primary-glow rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
               <Calendar className="w-8 h-8 text-primary-foreground" />
@@ -30,6 +35,7 @@ const ProblemSolutionSection = () => {
             </p>
           </div>
 
+          {/* Pilar 2: Gestão de Clientes */}
           <div className="text-center group">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-accent to-accent/80 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
               <Users className="w-8 h-8 text-accent-foreground" />
@@ -41,6 +47,7 @@ const ProblemSolutionSection = () => {
             </p>
           </div>
 
+          {/* Pilar 3: Controle e Receita */}
           <div className="text-center group">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
               <TrendingUp className="w-8 h-8 text-primary-foreground" />
