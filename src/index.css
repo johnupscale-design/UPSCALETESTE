@@ -48,17 +48,6 @@ All colors MUST be HSL.
 
     --sidebar-foreground: 240 5.3% 26.1%;
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
@@ -71,9 +60,8 @@ All colors MUST be HSL.
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 219 100% 60%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --primary-glow: 219 100% 70%;
+    --primary: 219 100% 65%;
+    --primary-foreground: 210 40% 98%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -81,28 +69,20 @@ All colors MUST be HSL.
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 199 100% 80%;
-    --accent-foreground: 222.2 84% 4.9%;
+    --accent: 199 100% 45%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 219 100% 60%;
+    --ring: 219 100% 65%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(219 100% 60%), hsl(199 100% 80%));
-    --gradient-card: linear-gradient(145deg, hsl(222.2 84% 4.9%), hsl(217.2 32.6% 17.5%));
-    --shadow-elegant: 0 10px 30px -10px hsl(219 100% 60% / 0.3);
-    --shadow-glow: 0 0 40px hsl(219 100% 70% / 0.4);
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 222.2 84% 4.9%;
+
+    --sidebar-foreground: 210 40% 98%;
+
   }
 }
 
@@ -115,3 +95,520 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Animações customizadas para liquid glass */
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slow-spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-slow-spin {
+  animation: slow-spin 20s linear infinite;
+}
+
+.animate-slow-spin-reverse {
+  animation: slow-spin-reverse 25s linear infinite;
+}
+
+/* ===== ANIMATED HERO SECTION STYLES ===== */
+
+.animated-container {
+  position: relative;
+  width: 620px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Container para imagem e vídeo */
+.media-container {
+  position: relative;
+  width: 500px;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Imagem de fundo com efeito liquid glass - Desktop View */
+.frontpage-image {
+  position: relative;
+  width: 416px;
+  height: 260px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.2),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  margin: 0;
+}
+
+.frontpage-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* Vídeo sobreposto com efeito liquid glass - Mobile View */
+.video-overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 5px;
+  width: 90px;
+  height: 193px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.2);
+  border: 4px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.3),
+    inset 0 3px 0 rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  z-index: 10;
+}
+
+.video-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.video-overlay video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+/* Ícones Flutuantes com Efeito Liquid Glass */
+.floating-icon {
+  position: absolute;
+  font-size: 24px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 
+    0 8px 32px rgba(102, 126, 234, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 0 20px rgba(102, 126, 234, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  z-index: 50;
+}
+
+.floating-icon i {
+  background: #1B1A1A;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+}
+
+.floating-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 
+    0 12px 40px rgba(102, 126, 234, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 0 30px rgba(102, 126, 234, 0.3);
+}
+
+.floating-icon:hover i {
+  background: #1B1A1A;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* POSICIONAMENTO DOS ÍCONES FLUTUANTES */
+/* Ícone 1 - Cérebro (fa-brain) - Representa Inteligência Artificial */
+.icon-1 { 
+  top: 5%; 
+  left: -18%; 
+  animation: liquidFloat1 8s ease-in-out infinite;
+  z-index: 100;
+}
+
+/* Ícone 2 - Gráfico de Linha (fa-chart-line) - Representa Crescimento/Analytics */
+.icon-2 { 
+  top: 25%; 
+  right: 0%; 
+  animation: liquidFloat2 7s ease-in-out infinite;
+  z-index: 100;
+}
+
+/* Ícone 3 - Aperto de Mão (fa-handshake) - Representa Parcerias/Relacionamento */
+.icon-3 { 
+  bottom: 5%; 
+  left: 20%; 
+  animation: liquidFloat3 9s ease-in-out infinite;
+  z-index: 100;
+}
+
+/* Ícone 4 - Robô (fa-robot) - Representa Automação/IA */
+.icon-4 { 
+  top: 5%; 
+  right: 25%; 
+  animation: liquidFloat4 6.5s ease-in-out infinite;
+  z-index: 100;
+}
+
+/* Ícone 5 - Maleta/Pasta (fa-briefcase) - Representa Negócios/Profissional */
+.icon-5 { 
+  bottom: 15%; 
+  right: -20%; 
+  animation: liquidFloat5 8.5s ease-in-out infinite;
+  z-index: 100;
+}
+
+/* Ícone 6 - Microchip (fa-microchip) - Representa Tecnologia/Processamento */
+.icon-6 { 
+  top: 45%; 
+  left: -20%; 
+  animation: liquidFloat6 7.5s ease-in-out infinite;
+  z-index: 100;
+}
+
+/* Ícone 7 - Usuários (fa-users) - Representa Comunidade/Clientes */
+.icon-7 { 
+  bottom: 69%; 
+  right: 65%; 
+  animation: liquidFloat7 9.5s ease-in-out infinite;
+  z-index: 100;
+}
+
+/* ANIMAÇÕES DOS ÍCONES FLUTUANTES */
+@keyframes liquidFloat1 {
+  0% { 
+    transform: translate(0, 0) scale(1); 
+    opacity: 0;
+  }
+  15% { 
+    opacity: 0.9;
+  }
+  25% { 
+    transform: translate(15px, -15px) scale(1.1); 
+    opacity: 1;
+  }
+  40% { 
+    opacity: 0.2;
+  }
+  50% { 
+    transform: translate(25px, 10px) scale(0.9); 
+    opacity: 0;
+  }
+  65% { 
+    opacity: 0.6;
+  }
+  75% { 
+    transform: translate(10px, 25px) scale(1.05); 
+    opacity: 0.9;
+  }
+  90% { 
+    opacity: 0.3;
+  }
+  100% { 
+    transform: translate(0, 0) scale(1); 
+    opacity: 0;
+  }
+}
+
+@keyframes liquidFloat2 {
+  0% { 
+    transform: translate(0, 0) scale(1); 
+    opacity: 0.7;
+  }
+  20% { 
+    opacity: 0;
+  }
+  30% { 
+    transform: translate(-15px, -20px) scale(1.15); 
+    opacity: 1;
+  }
+  45% { 
+    opacity: 0.1;
+  }
+  60% { 
+    transform: translate(-10px, 15px) scale(0.85); 
+    opacity: 0;
+  }
+  70% { 
+    opacity: 0.8;
+  }
+  80% { 
+    transform: translate(-20px, -10px) scale(1.08); 
+    opacity: 0.95;
+  }
+  95% { 
+    opacity: 0.2;
+  }
+  100% { 
+    transform: translate(0, 0) scale(1); 
+    opacity: 0.7;
+  }
+}
+
+@keyframes liquidFloat3 {
+  0% { 
+    transform: translate(0, 0) scale(1); 
+    opacity: 0.4;
+  }
+  10% { 
+    opacity: 0;
+  }
+  20% { 
+    transform: translate(20px, -25px) scale(1.12); 
+    opacity: 0.9;
+  }
+  35% { 
+    opacity: 0.2;
+  }
+  45% { 
+    transform: translate(15px, -35px) scale(0.95); 
+    opacity: 1;
+  }
+  55% { 
+    opacity: 0;
+  }
+  70% { 
+    transform: translate(30px, -15px) scale(1.05); 
+    opacity: 0.75;
+  }
+  85% { 
+    opacity: 0.1;
+  }
+  100% { 
+    transform: translate(0, 0) scale(1); 
+    opacity: 0.4;
+  }
+}
+
+@keyframes liquidFloat4 {
+  0% { 
+    transform: translate(0, 0) scale(1); 
+    opacity: 0.9;
+  }
+  25% { 
+    opacity: 0.1;
+  }
+  35% { 
+    transform: translate(-15px, 25px) scale(1.18); 
+    opacity: 1;
+  }
+  50% { 
+    opacity: 0;
+  }
+  55% { 
+    transform: translate(-25px, 35px) scale(0.88); 
+    opacity: 0.65;
+  }
+  75% { 
+    opacity: 0.2;
+  }
+  85% { 
+    transform: translate(-20px, 15px) scale(1.1); 
+    opacity: 0.9;
+  }
+  95% { 
+    opacity: 0;
+  }
+  100% { 
+    transform: translate(0, 0) scale(1); 
+    opacity: 0.9;
+  }
+}
+
+@keyframes liquidFloat5 {
+  0% { 
+    transform: translate(0, 0) scale(1); 
+    opacity: 0.2;
+  }
+  30% { 
+    opacity: 0.8;
+  }
+  40% { 
+    transform: translate(-15px, -20px) scale(1.12); 
+    opacity: 1;
+  }
+  50% { 
+    opacity: 0;
+  }
+  60% { 
+    transform: translate(-25px, 15px) scale(0.92); 
+    opacity: 0.7;
+  }
+  70% { 
+    opacity: 0.1;
+  }
+  80% { 
+    transform: translate(-10px, -25px) scale(1.08); 
+    opacity: 0.85;
+  }
+  90% { 
+    opacity: 0;
+  }
+  100% { 
+    transform: translate(0, 0) scale(1); 
+    opacity: 0.2;
+  }
+}
+
+@keyframes liquidFloat6 {
+  0% { 
+    transform: translate(0, 0) scale(1); 
+    opacity: 0;
+  }
+  15% { 
+    opacity: 0.6;
+  }
+  25% { 
+    transform: translate(18px, -12px) scale(1.14); 
+    opacity: 0.95;
+  }
+  40% { 
+    opacity: 0;
+  }
+  50% { 
+    transform: translate(12px, 20px) scale(0.9); 
+    opacity: 0.75;
+  }
+  65% { 
+    opacity: 0.2;
+  }
+  75% { 
+    transform: translate(22px, -8px) scale(1.06); 
+    opacity: 1;
+  }
+  85% { 
+    opacity: 0;
+  }
+  100% { 
+    transform: translate(0, 0) scale(1); 
+    opacity: 0;
+  }
+}
+
+@keyframes liquidFloat7 {
+  0% { 
+    transform: translate(0, 0) scale(1); 
+    opacity: 0.6;
+  }
+  20% { 
+    opacity: 0;
+  }
+  30% { 
+    transform: translate(-12px, -18px) scale(1.16); 
+    opacity: 1;
+  }
+  45% { 
+    opacity: 0.3;
+  }
+  55% { 
+    transform: translate(-20px, 22px) scale(0.88); 
+    opacity: 0.65;
+  }
+  65% { 
+    opacity: 0;
+  }
+  80% { 
+    transform: translate(-8px, -25px) scale(1.1); 
+    opacity: 0.9;
+  }
+  90% { 
+    opacity: 0.1;
+  }
+  100% { 
+    transform: translate(0, 0) scale(1); 
+    opacity: 0.6;
+  }
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  .animated-container {
+    width: 100%;
+    max-width: 450px; /* Aumentado de 400px para 450px */
+    height: 350px; /* Aumentado de 300px para 350px */
+    margin-top: -80px;
+  }
+
+  .media-container {
+    width: 100%;
+    max-width: 400px; /* Aumentado de 350px para 400px */
+    height: 280px; /* Aumentado de 220px para 280px */
+  }
+
+  .frontpage-image {
+    width: 100%;
+    max-width: 350px; /* Aumentado de 300px para 350px */
+    height: 220px; /* Aumentado de 180px para 220px */
+    margin-left: -24px; /* Move a imagem 20px para a esquerda */
+  }
+
+  .video-overlay {
+    width: 85px; /* Aumentado de 70px para 85px */
+    height: 180px; /* Aumentado de 150px para 180px */
+    right: -10px; /* Move o vídeo 10px mais para a direita */
+  }
+
+  .floating-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+/* Ajustes de posição dos ícones para desktop */
+@media (min-width: 1024px) {
+  /* Cérebro - mover mais para a direita */
+  .icon-1 { 
+    left: 5%; /* Era -5%, agora ainda mais à direita */
+  }
+  
+  /* Maleta - mover mais para a esquerda */
+  .icon-5 { 
+    right: -10%; /* Era -20%, agora menos à esquerda (mais visível) */
+  }
+  
+  /* Microchip - mover mais para a direita */
+  .icon-6 { 
+    left: 5%; /* Era -5%, agora ainda mais à direita */
+  }
+}
+
+/* ===== ANIMATED HERO SECTION STYLES - FINAL ===== */

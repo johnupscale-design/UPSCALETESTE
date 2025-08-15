@@ -1,21 +1,109 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
-  // Removido o estado do modal
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  // Componente do Menu Mobile usando Portal
+  const MobileMenu = () => (
+    <div className="lg:hidden">
+      {/* Backdrop único com fundo branco uniforme e       className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md" */}
+      <div 
+        className="fixed inset-0 bg-white/80 backdrop-blur-sm"
+        style={{ zIndex: 9999 }}
+        onClick={closeMenu}
+      ></div>
+      
+      {/* Menu Sidebar */}
+      <div 
+        className="fixed top-0 right-0 w-72 h-full bg-white shadow-2xl"
+        style={{ zIndex: 10000 }}
+      >
+        <div className="flex flex-col p-6 space-y-6">
+          {/* Header do Menu - SEM LOGO */}
+          <div className="flex items-center justify-end">
+            <button
+              onClick={closeMenu}
+              className="text-gray-900 hover:text-primary transition-colors p-2 rounded-md hover:bg-gray-100"
+            >
+              <X className="h-6 w-6" />
+            </button>
+          </div>
+          
+          {/* Navigation Links */}
+          <nav className="flex flex-col space-y-6">
+            <a 
+              href="#features" 
+              onClick={closeMenu}
+              className="text-xl font-medium text-gray-800 hover:text-primary transition-colors py-3 border-b border-gray-100"
+            >
+              Funcionalidades
+            </a>
+            <a 
+              href="#pricing" 
+              onClick={closeMenu}
+              className="text-xl font-medium text-gray-800 hover:text-primary transition-colors py-3 border-b border-gray-100"
+            >
+              Preços
+            </a>
+            <a 
+              href="#testimonials" 
+              onClick={closeMenu}
+              className="text-xl font-medium text-gray-800 hover:text-primary transition-colors py-3 border-b border-gray-100"
+            >
+              Depoimentos
+            </a>
+          </nav>
+          
+          {/* Action Buttons */}
+          <div className="flex flex-col space-y-4 pt-6">
+            <Button 
+              variant="outline" 
+              className="justify-center text-gray-800 border-gray-300 hover:bg-gray-50 w-full py-3 text-lg"
+            >
+              Entrar
+            </Button>
+            <Button
+              className="bg-primary hover:bg-primary/90 text-primary-foreground w-full py-3 text-lg font-medium"
+              asChild
+            >
+              <a
+                href="https://links.upscale.vu/widget/survey/oxeRZfpDcbB0zapaYqHl"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenu}
+              >
+                Começar Grátis
+              </a>
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/45 backdrop-blur-md">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <img 
-            src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/6894f2593ee1298470cb36eb.png" 
+            src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/689bc310d757ed4339084bce.png" 
             alt="Upscale Logo" 
-            className="h-10 w-auto" 
+            className="h-8 w-auto" 
           />
         </div>
         
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden lg:flex items-center space-x-8">
           <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
             Funcionalidades
           </a>
@@ -27,12 +115,25 @@ const Header = () => {
           </a>
         </nav>
 
-        <div className="flex items-center space-x-4">
-          <Button variant="ghost" className="hidden sm:inline-flex">
+        <div className="flex items-center space-x-2 sm:space-x-4">
+          <Button variant="ghost" className="hidden lg:inline-flex">
             Entrar
           </Button>
+          {/* Menu hambúrguer - visível apenas no mobile/tablet */}
+          <button
+            onClick={toggleMenu}
+            className="lg:hidden text-gray-900 hover:text-primary transition-colors p-3 rounded-md hover:bg-accent hover:text-accent-foreground"
+          >
+            {isMenuOpen ? (
+              <X className="h-8 w-8" />
+            ) : (
+              <Menu className="h-8 w-8" />
+            )}
+            <span className="sr-only">Menu</span>
+          </button>
+          {/* Botão CTA - visível apenas no desktop */}
           <Button
-            className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            className="hidden lg:inline-flex bg-[#1B1A1A] hover:bg-[#1B1A1A]/90 text-white"
             asChild
           >
             <a
@@ -45,7 +146,9 @@ const Header = () => {
           </Button>
         </div>
       </div>
-      {/* Modal removido, formulário abre em nova aba */}
+      
+      {/* Renderizar menu via Portal diretamente no body */}
+      {isMenuOpen && createPortal(<MobileMenu />, document.body)}
     </header>
   );
 };
