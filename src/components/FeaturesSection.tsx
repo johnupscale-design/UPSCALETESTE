@@ -28,12 +28,10 @@ const FeaturesSection = () => {
                 Smart Website
               </div>
               <h3 className="text-3xl font-bold mb-4">
-                Um website profissional, personalizado e pronto para vender por você
+                Seu Nome, Seu Domínio, Seus Clientes
               </h3>
               <p className="text-lg text-muted-foreground mb-6">
-                Crie um smart website incrível em minutos. Com ele, seus clientes podem agendar seus serviços 
-                de forma simples e intuitiva, 24 horas por dia. Otimizado para mobile e com a sua marca em 
-                destaque, ele se torna a sua melhor ferramenta de captação de leads.
+                Tenha um website profissional que é o centro do seu universo digital. Com a sua marca, suas cores e seus links, ele é a ferramenta definitiva para transformar visitantes em agendamentos, sem dividir o palco com ninguém.
               </p>
               <div className="flex items-center space-x-4 mb-6">
                 <div className="flex items-center text-sm text-muted-foreground">
@@ -81,12 +79,10 @@ const FeaturesSection = () => {
                 Inteligência Artificial
               </div>
               <h3 className="text-3xl font-bold mb-4">
-                Seu assistente virtual que nunca dorme
+                Seu Assistente Virtual Focado em Conversão
               </h3>
               <p className="text-lg text-muted-foreground mb-6">
-                Nosso chatbot com IA está sempre pronto para interagir com seus clientes, responder dúvidas, 
-                apresentar seus serviços e, claro, agendar um horário. Otimiza a experiência do usuário e 
-                transforma curiosos em clientes, tudo de forma automática.
+                Nosso chatbot com IA não é apenas um robô, é seu funcionário mais eficiente. Ele trabalha 24/7 para qualificar leads, agendar horários e responder dúvidas, garantindo que nenhum cliente em potencial seja perdido.
               </p>
               <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
                 Conheça o Chatbot

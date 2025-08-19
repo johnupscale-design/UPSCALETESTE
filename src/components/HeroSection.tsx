@@ -41,14 +41,14 @@ const HeroSection = () => {
           {/* Conteúdo Principal - Título, Proposta de Valor e CTA */}
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-              A gestão do seu negócio que{" "}
+              Onde sua marca é a{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                conquista mais clientes
+                única progagonista.
               </span>
             </h1>
             
             <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-sm sm:max-w-lg lg:max-w-2xl mx-auto lg:mx-0">
-              Uma plataforma completa de agendamento e Smart Website, impulsionada por Inteligência Artificial.
+              Assuma o controle da sua aquisição de clientes, da sua reputação online e do relacionamento com sua base. Tudo em um só lugar.
             </p>
 
             {/* Animated Container - Altura do container liquid glass na sessão (no mobile, esse -mb-0 aumentar aproxima do botão)  */}
@@ -74,7 +74,7 @@ const HeroSection = () => {
                   />
                 </div>
                 <div className="video-overlay">
-                  <video autoPlay muted loop>
+                  <video autoPlay muted loop playsInline controls={false}>
                     <source 
                       src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/689b8e09d757ed584cffcab2.mp4" 
                       type="video/mp4"
@@ -98,10 +98,10 @@ const HeroSection = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 text-center pb-20 sm:pb-20 -mt-24 sm:pt-4 lg:pt-32 lg:pb-8">
           <div className="px-2">
             <div className="flex items-center justify-center mb-1 sm:mb-2">
-              <Users className="w-4 sm:w-5 h-4 sm:h-5 lg:w-12 lg:h-12 text-white mr-1 sm:mr-2 lg:mr-4" />
-              <span className="text-xl sm:text-2xl lg:text-5xl font-bold text-white">130k+</span>
+              <Calendar className="w-4 sm:w-5 h-4 sm:h-5 lg:w-12 lg:h-12 text-white mr-1 sm:mr-2 lg:mr-4" />
+              <span className="text-xl sm:text-2xl lg:text-5xl font-bold text-white">1B+</span>
             </div>
-            <p className="text-xs sm:text-sm lg:text-lg text-white lg:text-white leading-tight">Empresas parceiras</p>
+            <p className="text-xs sm:text-sm lg:text-lg text-white lg:text-white leading-tight">Agendamentos</p>
           </div>
           <div className="px-2">
             <div className="flex items-center justify-center mb-1 sm:mb-2">

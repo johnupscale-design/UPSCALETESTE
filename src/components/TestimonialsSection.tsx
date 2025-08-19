@@ -78,7 +78,7 @@ const TestimonialsSection = () => {
   return (
     /* ===== SEÇÃO DE DEPOIMENTOS ===== */
     /* Contém: Carrossel de depoimentos de clientes satisfeitos */
-    <section id="testimonials" className="py-20 bg-muted/30">
+    <section id="testimonials" className="py-18 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Título da Seção */}
         <div className="text-center mb-16">
@@ -101,8 +101,8 @@ const TestimonialsSection = () => {
             }}
           >
             {carouselTestimonials.map((t, idx) => (
-              <li key={idx} className="min-w-[340px] max-w-[340px] flex-shrink-0 py-2">
-                <div className="bg-card p-6 rounded-2xl border shadow-lg h-full flex flex-col justify-between">
+              <li key={idx} className="min-w-[340px] max-w-[340px] flex-shrink-0 pt-2 pb-20">
+                <div className="bg-card px-6 pt-10 pb-36 rounded-2xl border shadow-lg h-full flex flex-col justify-between">
                   <div>
                     <div className="flex items-center mb-4">
                       <img
