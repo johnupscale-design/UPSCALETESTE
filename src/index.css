@@ -591,6 +591,10 @@ All colors MUST be HSL.
     height: 50px;
     font-size: 20px;
   }
+
+  .horarios-mobile-spacing {
+    padding-bottom: 2.5rem;
+  }
 }
 
 /* Ajustes de posição dos ícones para desktop */
@@ -612,3 +616,115 @@ All colors MUST be HSL.
 }
 
 /* ===== ANIMATED HERO SECTION STYLES - FINAL ===== */
+
+/* ===== CHAT ANIMATIONS ===== */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes message-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(15px) scale(0.95);
+  }
+  60% {
+    transform: translateY(-2px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes message-sent {
+  0% {
+    opacity: 0;
+    transform: translateX(20px) scale(0.95);
+  }
+  50% {
+    transform: translateX(-2px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes message-received {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px) scale(0.95);
+  }
+  50% {
+    transform: translateX(2px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: message-appear 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-message-sent {
+  animation: message-sent 0.6s ease-out forwards;
+}
+
+.animate-message-received {
+  animation: message-received 0.6s ease-out forwards;
+}
+
+/* Chat container scrollbar styling */
+.chat-scroll {
+  scroll-behavior: smooth;
+}
+
+.chat-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.chat-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.chat-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.chat-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Enhanced liquid glass effects for chat */
+.liquid-glass {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.liquid-glass-message {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.liquid-glass-message:hover {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}

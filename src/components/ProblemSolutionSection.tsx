@@ -50,16 +50,14 @@ const ProblemSolutionSection = () => {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-6 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-2 lg:mb-6">
-            O seu negócio merece crescer.{" "}
-            <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              A gente faz a parte difícil.
-            </span>
+        <div className="text-center mb-10 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-2 lg:mb-6" style={{ color: '#1c1a1a' }}>
+            Você foca no cliente. <br />
+            Nós, na inovação.
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+          {/* <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Automatizamos sua operação para você ter mais tempo e clientes mais felizes.
-          </p>
+          </p> */}
         </div>
 
         <div className="grid md:grid-cols-3 gap-3 md:gap-8">
@@ -76,18 +74,11 @@ const ProblemSolutionSection = () => {
               <div className="relative z-10 flex md:flex-col md:items-center md:text-center h-full">
                 {/* --- Layout Mobile --- */}
                 <div className="flex items-center w-full md:hidden">
-                  <div className="relative w-24 h-auto flex-shrink-0 mr-4">
-                    <img 
-                      src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/68a40d842b4600143ce8de51.png" 
-                      alt="Agendamento" 
-                      className="w-24 h-auto"
-                    />
-                    <img 
-                      src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/68a40d842b460099a9e8de52.png" 
-                      alt="Agendamento Overlay" 
-                      className="absolute top-0 left-0 w-24 h-auto"
-                    />
-                  </div>
+                  <img 
+                    src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/68a41a7c2b4600395feaaa44.png" 
+                    alt="Agendamento" 
+                    className="w-24 h-auto flex-shrink-0 mr-4"
+                  />
                   <div className="flex-grow">
                     <h3 className={`text-lg font-semibold text-gray-800/95 leading-tight transition-all duration-700 ${
                       visibleItems[0] 
@@ -212,7 +203,7 @@ const ProblemSolutionSection = () => {
                 {/* --- Layout Mobile --- */}
                 <div className="flex items-center w-full md:hidden">
                   <img 
-                    src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/689ec41824858af6fafad2a6.png" 
+                    src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/68a4aa5eeddaa3f420eb7c63.png" 
                     alt="Controle e Receita" 
                     className="w-24 h-auto flex-shrink-0 mr-4"
                   />
