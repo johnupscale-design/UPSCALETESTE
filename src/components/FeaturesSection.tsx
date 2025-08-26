@@ -318,7 +318,7 @@ const FeaturesSection = () => {
               {/* Botão abaixo da animação */}
               <div className="text-left">
                 <Button className="text-white hover:bg-[#1B1A1A]/90" style={{ backgroundColor: '#1B1A1A' }}>
-                  Conheça o Chatbot
+                  Começar grátis com IA
                 </Button>
               </div>
             </div>

@@ -40,12 +40,22 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, onClick, type, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
+    // Redireciona para o link se não houver onClick customizado e não for submit
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+      if (onClick) {
+        onClick(e)
+      } else if (type !== "submit") {
+        window.location.href = "https://links.upscale.vu/widget/booking/CydNwkofOGSg2NY6lH4M"
+      }
+    }
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
+        type={type}
+        onClick={handleClick}
         {...props}
       />
     )

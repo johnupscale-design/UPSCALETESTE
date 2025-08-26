@@ -21,37 +21,8 @@ const PricingSection = () => {
         </div>
 
         {/* Grade de Cartões de Planos */}
-        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* PLANO 1: Gratuito */}
-          <div className="bg-card p-8 rounded-2xl border">
-            <h3 className="text-2xl font-bold mb-2">Plano Gratuito</h3>
-            <p className="text-muted-foreground mb-6">Ideal para quem está começando</p>
-            <div className="mb-6">
-              <span className="text-4xl font-bold">R$ 0</span>
-              <span className="text-muted-foreground">/mês</span>
-            </div>
-            <ul className="space-y-3 mb-8">
-              <li className="flex items-center">
-                <Check className="w-5 h-5 text-primary mr-3" />
-                Smart Website Personalizado
-              </li>
-              <li className="flex items-center">
-                <Check className="w-5 h-5 text-primary mr-3" />
-                Agendamento Online
-              </li>
-              <li className="flex items-center">
-                <Check className="w-5 h-5 text-primary mr-3" />
-                1 Colaborador
-              </li>
-              <li className="flex items-center">
-                <Check className="w-5 h-5 text-primary mr-3" />
-                Gestão de Clientes
-              </li>
-            </ul>
-            <Button className="w-full">Começar Grátis</Button>
-          </div>
-
-          {/* PLANO 2: Pro (Mais Popular) */}
+        <div className="grid lg:grid-cols-1 gap-8 max-w-6xl mx-auto">
+          {/* PLANO Pro (Mais Popular) */}
           <div className="bg-gradient-to-br from-primary to-accent p-[2px] rounded-2xl relative">
             <div className="bg-card p-8 rounded-2xl h-full">
               <div className="text-center mb-4">
@@ -87,41 +58,17 @@ const PricingSection = () => {
                   Suporte Prioritário
                 </li>
               </ul>
-              <Button className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90">
+              <a
+                href="https://links.upscale.vu/widget/booking/CydNwkofOGSg2NY6lH4M"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 text-center rounded-md py-3 font-bold text-white block transition-all"
+              >
                 Experimente por 14 dias
-              </Button>
+              </a>
             </div>
           </div>
 
-          {/* PLANO 3: Enterprise */}
-          <div className="bg-card p-8 rounded-2xl border">
-            <h3 className="text-2xl font-bold mb-2">Plano Enterprise</h3>
-            <p className="text-muted-foreground mb-6">Solução completa para grandes redes</p>
-            <div className="mb-6">
-              <span className="text-4xl font-bold">Sob consulta</span>
-            </div>
-            <ul className="space-y-3 mb-8">
-              <li className="flex items-center">
-                <Check className="w-5 h-5 text-primary mr-3" />
-                Soluções personalizadas
-              </li>
-              <li className="flex items-center">
-                <Check className="w-5 h-5 text-primary mr-3" />
-                Automação avançada
-              </li>
-              <li className="flex items-center">
-                <Check className="w-5 h-5 text-primary mr-3" />
-                Gerente de contas dedicado
-              </li>
-              <li className="flex items-center">
-                <Check className="w-5 h-5 text-primary mr-3" />
-                Integração personalizada
-              </li>
-            </ul>
-            <Button variant="outline" className="w-full">
-              Fale com nosso time
-            </Button>
-          </div>
         </div>
       </div>
     </section>
