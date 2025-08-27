@@ -63,7 +63,7 @@ const ProblemSolutionSection = () => {
         <div className="grid md:grid-cols-3 gap-6 md:gap-12">
           {/* Pilar 1 - Agendamento */}
           <div ref={setItemRef(0)} className="group relative order-2 md:order-none">
-            <div className="relative p-3 md:p-8 h-56 md:h-72 bg-white/30 backdrop-blur-[30px] rounded-3xl border-2 border-white/60 shadow-[0_8px_32px_rgba(31,38,135,0.15),0_0_0_1px_rgba(255,255,255,0.3)] hover:shadow-[0_12px_40px_rgba(31,38,135,0.25),0_0_0_1px_rgba(255,255,255,0.5)] transition-all duration-500 hover:bg-white/40 hover:border-white/70 hover:scale-[1.02]">
+            <div className="relative p-3 md:p-12 h-56 md:h-[400px] bg-white/30 backdrop-blur-[30px] rounded-3xl border-2 border-white/60 shadow-[0_8px_32px_rgba(31,38,135,0.15),0_0_0_1px_rgba(255,255,255,0.3)] hover:shadow-[0_12px_40px_rgba(31,38,135,0.25),0_0_0_1px_rgba(255,255,255,0.5)] transition-all duration-500 hover:bg-white/40 hover:border-white/70 hover:scale-[1.02]">
               {/* Reflexo líquido mais intenso */}
               <div className="absolute top-0 left-0 right-0 h-2/5 bg-gradient-to-b from-white/40 via-white/20 to-transparent rounded-t-3xl pointer-events-none"></div>
               <div className="absolute bottom-0 left-0 right-0 h-1/5 bg-gradient-to-t from-white/15 to-transparent rounded-b-3xl pointer-events-none"></div>
@@ -103,13 +103,15 @@ const ProblemSolutionSection = () => {
 
                 {/* --- Layout Desktop --- */}
                 <div className="hidden md:flex md:flex-col md:items-center w-full">
-                  <div className={`flex items-center justify-center w-14 h-14 flex-shrink-0 bg-gradient-to-br from-blue-500/90 to-cyan-500/90 backdrop-blur-sm rounded-2xl mb-4 group-hover:scale-110 transition-all duration-700 border border-white/50 shadow-lg ${
-                    visibleItems[0] 
-                      ? 'translate-y-0 opacity-100' 
-                      : 'translate-y-8 opacity-0'
-                  }`} style={{ transitionDelay: '100ms' }}>
-                    <Calendar className="w-7 h-7 text-white" />
-                  </div>
+                  <img 
+                    src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/68a41a7c2b4600395feaaa44.png" 
+                    alt="Agendamento" 
+                    className={`w-24 h-auto flex-shrink-0 mb-4 transition-all duration-700 ${
+                      visibleItems[0] 
+                        ? 'translate-y-0 opacity-100' 
+                        : 'translate-y-8 opacity-0'
+                    }`} style={{ transitionDelay: '150ms' }}
+                  />
                   <h3 className={`text-lg font-semibold text-gray-800/95 leading-tight transition-all duration-700 mb-3 ${
                     visibleItems[0] 
                       ? 'translate-y-0 opacity-100' 
@@ -131,7 +133,7 @@ const ProblemSolutionSection = () => {
 
           {/* Pilar 2 - Clientes Engajados */}
           <div ref={setItemRef(1)} className="group relative order-1 md:order-none">
-            <div className="relative p-3 md:p-8 h-56 md:h-72 bg-white/30 backdrop-blur-[30px] rounded-3xl border-2 border-white/60 shadow-[0_8px_32px_rgba(31,38,135,0.15),0_0_0_1px_rgba(255,255,255,0.3)] hover:shadow-[0_12px_40px_rgba(31,38,135,0.25),0_0_0_1px_rgba(255,255,255,0.5)] transition-all duration-500 hover:bg-white/40 hover:border-white/70 hover:scale-[1.02]">
+            <div className="relative p-3 md:p-12 h-56 md:h-[400px] bg-white/30 backdrop-blur-[30px] rounded-3xl border-2 border-white/60 shadow-[0_8px_32px_rgba(31,38,135,0.15),0_0_0_1px_rgba(255,255,255,0.3)] hover:shadow-[0_12px_40px_rgba(31,38,135,0.25),0_0_0_1px_rgba(255,255,255,0.5)] transition-all duration-500 hover:bg-white/40 hover:border-white/70 hover:scale-[1.02]">
               {/* Reflexo líquido mais intenso */}
               <div className="absolute top-0 left-0 right-0 h-2/5 bg-gradient-to-b from-white/40 via-white/20 to-transparent rounded-t-3xl pointer-events-none"></div>
               <div className="absolute bottom-0 left-0 right-0 h-1/5 bg-gradient-to-t from-white/15 to-transparent rounded-b-3xl pointer-events-none"></div>
@@ -171,13 +173,15 @@ const ProblemSolutionSection = () => {
 
                 {/* --- Layout Desktop --- */}
                 <div className="hidden md:flex md:flex-col md:items-center w-full">
-                  <div className={`flex items-center justify-center w-14 h-14 flex-shrink-0 bg-gradient-to-br from-purple-500/90 to-pink-500/90 backdrop-blur-sm rounded-2xl mb-4 group-hover:scale-110 transition-all duration-700 border border-white/50 shadow-lg ${
-                    visibleItems[1] 
-                      ? 'translate-y-0 opacity-100' 
-                      : 'translate-y-8 opacity-0'
-                  }`} style={{ transitionDelay: '100ms' }}>
-                    <Users className="w-7 h-7 text-white" />
-                  </div>
+                  <img 
+                    src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/68af4fef00de61e0918fc07a.png" 
+                    alt="Clientes Engajados" 
+                    className={`w-24 h-auto flex-shrink-0 mb-4 transition-all duration-700 ${
+                      visibleItems[1] 
+                        ? 'translate-y-0 opacity-100' 
+                        : 'translate-y-8 opacity-0'
+                    }`} style={{ transitionDelay: '150ms' }}
+                  />
                   <h3 className={`text-lg font-semibold text-gray-800/95 leading-tight transition-all duration-700 mb-3 ${
                     visibleItems[1] 
                       ? 'translate-y-0 opacity-100' 
@@ -190,16 +194,16 @@ const ProblemSolutionSection = () => {
                       ? 'translate-y-0 opacity-100' 
                       : 'translate-y-8 opacity-0'
                   }`} style={{ transitionDelay: '300ms' }}>
-                                          Criamos um ambiente digital exclusivo para sua marca, onde a jornada do cliente é focada em você, sem a distração de concorrentes.
-                    </p>
-                  </div>
+                    Criamos um ambiente digital exclusivo para sua marca, onde a jornada do cliente é focada em você, sem a distração de concorrentes.
+                  </p>
+                </div>
                 </div>
             </div>
           </div>
 
           {/* Pilar 3 - Controle e Receita */}
           <div ref={setItemRef(2)} className="group relative order-3 md:order-none">
-            <div className="relative p-3 md:p-8 h-56 md:h-72 bg-white/30 backdrop-blur-[30px] rounded-3xl border-2 border-white/60 shadow-[0_8px_32px_rgba(31,38,135,0.15),0_0_0_1px_rgba(255,255,255,0.3)] hover:shadow-[0_12px_40px_rgba(31,38,135,0.25),0_0_0_1px_rgba(255,255,255,0.5)] transition-all duration-500 hover:bg-white/40 hover:border-white/70 hover:scale-[1.02]">
+            <div className="relative p-3 md:p-12 h-56 md:h-[400px] bg-white/30 backdrop-blur-[30px] rounded-3xl border-2 border-white/60 shadow-[0_8px_32px_rgba(31,38,135,0.15),0_0_0_1px_rgba(255,255,255,0.3)] hover:shadow-[0_12px_40px_rgba(31,38,135,0.25),0_0_0_1px_rgba(255,255,255,0.5)] transition-all duration-500 hover:bg-white/40 hover:border-white/70 hover:scale-[1.02]">
               {/* Reflexo líquido mais intenso */}
               <div className="absolute top-0 left-0 right-0 h-2/5 bg-gradient-to-b from-white/40 via-white/20 to-transparent rounded-t-3xl pointer-events-none"></div>
               <div className="absolute bottom-0 left-0 right-0 h-1/5 bg-gradient-to-t from-white/15 to-transparent rounded-b-3xl pointer-events-none"></div>
@@ -239,13 +243,15 @@ const ProblemSolutionSection = () => {
 
                 {/* --- Layout Desktop --- */}
                 <div className="hidden md:flex md:flex-col md:items-center w-full">
-                  <div className={`flex items-center justify-center w-14 h-14 flex-shrink-0 bg-gradient-to-br from-green-500/90 to-emerald-500/90 backdrop-blur-sm rounded-2xl mb-4 group-hover:scale-110 transition-all duration-700 border border-white/50 shadow-lg ${
-                    visibleItems[2] 
-                      ? 'translate-y-0 opacity-100' 
-                      : 'translate-y-8 opacity-0'
-                  }`} style={{ transitionDelay: '100ms' }}>
-                    <TrendingUp className="w-7 h-7 text-white" />
-                  </div>
+                  <img 
+                    src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/68a4aa5eeddaa3f420eb7c63.png" 
+                    alt="Controle e Receita" 
+                    className={`w-24 h-auto flex-shrink-0 mb-4 transition-all duration-700 ${
+                      visibleItems[2] 
+                        ? 'translate-y-0 opacity-100' 
+                        : 'translate-y-8 opacity-0'
+                    }`} style={{ transitionDelay: '150ms' }}
+                  />
                   <h3 className={`text-lg font-semibold text-gray-800/95 leading-tight transition-all duration-700 mb-3 ${
                     visibleItems[2] 
                       ? 'translate-y-0 opacity-100' 
