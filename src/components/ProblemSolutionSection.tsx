@@ -53,17 +53,17 @@ const ProblemSolutionSection = () => {
         <div className="text-center mb-10 md:mb-20">
           <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-2 lg:mb-6" style={{ color: '#1c1a1a' }}>
             Você foca no cliente. <br />
-            Nós, na inovação.
+            Nós, na <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">inovação</span>.
           </h2>
           {/* <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Automatizamos sua operação para você ter mais tempo e clientes mais felizes.
           </p> */}
         </div>
 
-        <div className="grid md:grid-cols-3 gap-3 md:gap-8">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-12">
           {/* Pilar 1 - Agendamento */}
           <div ref={setItemRef(0)} className="group relative order-2 md:order-none">
-            <div className="relative p-3 md:p-8 h-44 md:h-72 bg-white/30 backdrop-blur-[30px] rounded-3xl border-2 border-white/60 shadow-[0_8px_32px_rgba(31,38,135,0.15),0_0_0_1px_rgba(255,255,255,0.3)] hover:shadow-[0_12px_40px_rgba(31,38,135,0.25),0_0_0_1px_rgba(255,255,255,0.5)] transition-all duration-500 hover:bg-white/40 hover:border-white/70 hover:scale-[1.02]">
+            <div className="relative p-3 md:p-8 h-56 md:h-72 bg-white/30 backdrop-blur-[30px] rounded-3xl border-2 border-white/60 shadow-[0_8px_32px_rgba(31,38,135,0.15),0_0_0_1px_rgba(255,255,255,0.3)] hover:shadow-[0_12px_40px_rgba(31,38,135,0.25),0_0_0_1px_rgba(255,255,255,0.5)] transition-all duration-500 hover:bg-white/40 hover:border-white/70 hover:scale-[1.02]">
               {/* Reflexo líquido mais intenso */}
               <div className="absolute top-0 left-0 right-0 h-2/5 bg-gradient-to-b from-white/40 via-white/20 to-transparent rounded-t-3xl pointer-events-none"></div>
               <div className="absolute bottom-0 left-0 right-0 h-1/5 bg-gradient-to-t from-white/15 to-transparent rounded-b-3xl pointer-events-none"></div>
@@ -77,7 +77,11 @@ const ProblemSolutionSection = () => {
                   <img 
                     src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/68a41a7c2b4600395feaaa44.png" 
                     alt="Agendamento" 
-                    className="w-24 h-auto flex-shrink-0 mr-4"
+                    className={`w-24 h-auto flex-shrink-0 mr-4 transition-all duration-700 ${
+                      visibleItems[0] 
+                        ? 'translate-y-0 opacity-100' 
+                        : 'translate-y-8 opacity-0'
+                    }`} style={{ transitionDelay: '150ms' }}
                   />
                   <div className="flex-grow">
                     <h3 className={`text-lg font-semibold text-gray-800/95 leading-tight transition-all duration-700 ${
@@ -127,7 +131,7 @@ const ProblemSolutionSection = () => {
 
           {/* Pilar 2 - Clientes Engajados */}
           <div ref={setItemRef(1)} className="group relative order-1 md:order-none">
-            <div className="relative p-3 md:p-8 h-44 md:h-72 bg-white/30 backdrop-blur-[30px] rounded-3xl border-2 border-white/60 shadow-[0_8px_32px_rgba(31,38,135,0.15),0_0_0_1px_rgba(255,255,255,0.3)] hover:shadow-[0_12px_40px_rgba(31,38,135,0.25),0_0_0_1px_rgba(255,255,255,0.5)] transition-all duration-500 hover:bg-white/40 hover:border-white/70 hover:scale-[1.02]">
+            <div className="relative p-3 md:p-8 h-56 md:h-72 bg-white/30 backdrop-blur-[30px] rounded-3xl border-2 border-white/60 shadow-[0_8px_32px_rgba(31,38,135,0.15),0_0_0_1px_rgba(255,255,255,0.3)] hover:shadow-[0_12px_40px_rgba(31,38,135,0.25),0_0_0_1px_rgba(255,255,255,0.5)] transition-all duration-500 hover:bg-white/40 hover:border-white/70 hover:scale-[1.02]">
               {/* Reflexo líquido mais intenso */}
               <div className="absolute top-0 left-0 right-0 h-2/5 bg-gradient-to-b from-white/40 via-white/20 to-transparent rounded-t-3xl pointer-events-none"></div>
               <div className="absolute bottom-0 left-0 right-0 h-1/5 bg-gradient-to-t from-white/15 to-transparent rounded-b-3xl pointer-events-none"></div>
@@ -141,7 +145,11 @@ const ProblemSolutionSection = () => {
                   <img 
                     src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/68a40ac2fcbcd60b2a3b5ff3.png" 
                     alt="Clientes Engajados" 
-                    className="w-24 h-auto flex-shrink-0 mr-4"
+                    className={`w-24 h-auto flex-shrink-0 mr-4 transition-all duration-700 ${
+                      visibleItems[1] 
+                        ? 'translate-y-0 opacity-100' 
+                        : 'translate-y-8 opacity-0'
+                    }`} style={{ transitionDelay: '150ms' }}
                   />
                   <div className="flex-grow">
                     <h3 className={`text-lg font-semibold text-gray-800/95 leading-tight transition-all duration-700 ${
@@ -191,7 +199,7 @@ const ProblemSolutionSection = () => {
 
           {/* Pilar 3 - Controle e Receita */}
           <div ref={setItemRef(2)} className="group relative order-3 md:order-none">
-            <div className="relative p-3 md:p-8 h-44 md:h-72 bg-white/30 backdrop-blur-[30px] rounded-3xl border-2 border-white/60 shadow-[0_8px_32px_rgba(31,38,135,0.15),0_0_0_1px_rgba(255,255,255,0.3)] hover:shadow-[0_12px_40px_rgba(31,38,135,0.25),0_0_0_1px_rgba(255,255,255,0.5)] transition-all duration-500 hover:bg-white/40 hover:border-white/70 hover:scale-[1.02]">
+            <div className="relative p-3 md:p-8 h-56 md:h-72 bg-white/30 backdrop-blur-[30px] rounded-3xl border-2 border-white/60 shadow-[0_8px_32px_rgba(31,38,135,0.15),0_0_0_1px_rgba(255,255,255,0.3)] hover:shadow-[0_12px_40px_rgba(31,38,135,0.25),0_0_0_1px_rgba(255,255,255,0.5)] transition-all duration-500 hover:bg-white/40 hover:border-white/70 hover:scale-[1.02]">
               {/* Reflexo líquido mais intenso */}
               <div className="absolute top-0 left-0 right-0 h-2/5 bg-gradient-to-b from-white/40 via-white/20 to-transparent rounded-t-3xl pointer-events-none"></div>
               <div className="absolute bottom-0 left-0 right-0 h-1/5 bg-gradient-to-t from-white/15 to-transparent rounded-b-3xl pointer-events-none"></div>
@@ -205,7 +213,11 @@ const ProblemSolutionSection = () => {
                   <img 
                     src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/68a4aa5eeddaa3f420eb7c63.png" 
                     alt="Controle e Receita" 
-                    className="w-24 h-auto flex-shrink-0 mr-4"
+                    className={`w-24 h-auto flex-shrink-0 mr-4 transition-all duration-700 ${
+                      visibleItems[2] 
+                        ? 'translate-y-0 opacity-100' 
+                        : 'translate-y-8 opacity-0'
+                    }`} style={{ transitionDelay: '150ms' }}
                   />
                   <div className="flex-grow">
                     <h3 className={`text-lg font-semibold text-gray-800/95 leading-tight transition-all duration-700 ${

@@ -47,19 +47,17 @@ const HeroSection = () => {
               </span>
             </h1>
             
-            <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-sm sm:max-w-lg lg:max-w-2xl mx-auto lg:mx-0">
-              Assuma o controle da sua aquisição de clientes, da sua reputação online e do relacionamento com seus clientes.<br></br>Tudo em um só lugar.
+            <p className="text-lg sm:text-xl text-muted-foreground mb-8 sm:mb-8 max-w-sm sm:max-w-lg lg:max-w-2xl mx-auto lg:mx-0">
+              Assuma em um só lugar o controle da sua aquisição de clientes, da sua reputação online e do relacionamento com sua bae.
             </p>
 
             {/* Animated Container - Altura do container liquid glass na sessão (no mobile, esse -mb-0 aumentar aproxima do botão)  */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 -mb-0 sm:mb-12">
-              <Button size="lg" className="bg-[#1B1A1A] hover:bg-[#1B1A1A]/90 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 -mb-2 sm:mb-12">
+              <Button size="lg" className="bg-[#1B1A1A] hover:bg-[#1B1A1A]/90 text-white px-4 sm:px-8 py-6 sm:py-4 text-base sm:text-lg">
                 Comece Grátis Agora
               </Button>
-              <Button size="lg" className="bg-gray-50 hover:bg-white text-gray-800 border border-gray-200 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg">
-                <Play className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
-                Veja as Funcionalidades
-              </Button>
+              {/* Espaçamento extra abaixo do botão para mobile */}
+              <div className="block sm:hidden" style={{ height: '16px' }}></div>
             </div>
           </div>
           
