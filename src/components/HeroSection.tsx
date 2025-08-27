@@ -40,7 +40,7 @@ const HeroSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12 py-20">
           {/* Conteúdo Principal - Título, Proposta de Valor e CTA */}
           <div className="flex-1 text-center lg:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+            <h1 className="text-[38px] sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
               Onde sua marca é a{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 única progagonista.
@@ -48,7 +48,7 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-sm sm:max-w-lg lg:max-w-2xl mx-auto lg:mx-0">
-              Assuma o controle da sua aquisição de clientes, da sua reputação online e do relacionamento com sua base. Tudo em um só lugar.
+              Assuma o controle da sua aquisição de clientes, da sua reputação online e do relacionamento com seus clientes.<br></br>Tudo em um só lugar.
             </p>
 
             {/* Animated Container - Altura do container liquid glass na sessão (no mobile, esse -mb-0 aumentar aproxima do botão)  */}
