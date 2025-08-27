@@ -23,7 +23,7 @@ const PricingSection = () => {
         {/* Grade de Cartões de Planos */}
         <div className="grid lg:grid-cols-1 gap-8 max-w-6xl mx-auto">
           {/* PLANO Pro (Mais Popular) */}
-          <div className="bg-gradient-to-br from-primary to-accent p-[2px] rounded-2xl relative">
+          <div className="bg-gradient-to-br from-primary to-accent p-[3px] rounded-2xl relative">
             <div className="bg-card p-8 rounded-2xl h-full">
               <div className="text-center mb-4">
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent text-sm font-medium">

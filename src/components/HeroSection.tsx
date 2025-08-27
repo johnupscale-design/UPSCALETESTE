@@ -53,8 +53,12 @@ const HeroSection = () => {
 
             {/* Animated Container - Altura do container liquid glass na sessão (no mobile, esse -mb-0 aumentar aproxima do botão)  */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 -mb-2 sm:mb-12">
-              <Button size="lg" className="bg-[#1B1A1A] hover:bg-[#1B1A1A]/90 text-white px-4 sm:px-8 py-6 sm:py-4 text-base sm:text-lg">
-                Comece Grátis Agora
+              <Button
+                size="lg"
+                className="bg-[#1B1A1A] hover:bg-[#1B1A1A]/90 text-white px-4 sm:px-8 py-6 sm:py-4 text-base sm:text-lg max-w-xs w-full mx-auto"
+                asChild
+              >
+                <a href="/agendamento">Comece Grátis Agora</a>
               </Button>
               {/* Espaçamento extra abaixo do botão para mobile */}
               <div className="block sm:hidden" style={{ height: '16px' }}></div>
