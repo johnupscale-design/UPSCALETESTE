@@ -40,7 +40,7 @@ const ProblemSolutionSection = () => {
     itemRefs.current[index] = el;
   };
   return (
-    <section className="pt-12 pb-20 relative overflow-hidden">
+    <section className="pt-14 pb-20 relative overflow-hidden">
       {/* Background com gradient animado */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50/40 via-purple-50/30 to-pink-50/40"></div>
       <div className="absolute inset-0 bg-gradient-to-tr from-cyan-100/20 via-transparent to-orange-100/20 animate-pulse"></div>

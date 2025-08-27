@@ -97,7 +97,7 @@ const HeroSection = () => {
           <div className="px-2">
             <div className="flex items-center justify-center mb-1 sm:mb-2">
               <Calendar className="w-4 sm:w-5 h-4 sm:h-5 lg:w-12 lg:h-12 text-white mr-1 sm:mr-2 lg:mr-4" />
-              <span className="text-xl sm:text-2xl lg:text-5xl font-bold text-white">1B+</span>
+              <span className="text-xl sm:text-2xl lg:text-5xl font-bold text-white">1M+</span>
             </div>
             <p className="text-xs sm:text-sm lg:text-lg text-white lg:text-white leading-tight">Agendamentos</p>
           </div>
