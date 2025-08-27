@@ -2,11 +2,11 @@ import React from "react";
 
 const Agendamento = () => {
   return (
-    <div className="bg-gray-50 text-gray-800 flex items-center justify-center pt-12 pb-3 px-3 mt-0" style={{ fontFamily: 'Inter, sans-serif' }}>
+    <div className="bg-gray-50 text-gray-800 flex items-center justify-center pt-6 pb-3 px-3 mt-0" style={{ fontFamily: 'Inter, sans-serif' }}>
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg text-center overflow-hidden">
         <div className="p-6 sm:p-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-3">Ótima escolha!</h1>
-          <p className="text-lg text-gray-600 mb-8">Seu site está quase pronto. Faltam 2 passos:</p>
+          <p className="text-lg text-gray-600 mb-8">Seu site está quase pronto. <br></br>Faltam 2 passos:</p>
           <div className="flex items-center justify-center space-x-4 mb-10">
             <div className="flex items-center text-sm font-medium text-blue-600">
               <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
