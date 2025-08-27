@@ -26,7 +26,7 @@ const Agendamento = () => {
               </div>
               <div>
                 <h3 className="font-bold text-gray-700">2. Personalização</h3>
-                <p className="text-gray-600">Em seguida, preencha um formulário rápido (5 min) para construirmos sua prévia.</p>
+                <p className="text-gray-600">Em seguida, preencha um formulário rápido (3 min) para construirmos sua prévia.</p>
               </div>
             </div>
           </div>

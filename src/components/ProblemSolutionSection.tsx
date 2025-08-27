@@ -143,7 +143,7 @@ const ProblemSolutionSection = () => {
                 {/* --- Layout Mobile --- */}
                 <div className="flex items-center w-full md:hidden">
                   <img 
-                    src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/68a40ac2fcbcd60b2a3b5ff3.png" 
+                    src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/68af4fef00de61e0918fc07a.png" 
                     alt="Clientes Engajados" 
                     className={`w-24 h-auto flex-shrink-0 mr-4 transition-all duration-700 ${
                       visibleItems[1] 

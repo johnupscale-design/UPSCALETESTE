@@ -61,10 +61,6 @@ const PricingSection = () => {
                   <Check className="w-5 h-5 text-primary mr-3" />
                   Suporte Prioritário via WhatsApp
                 </li>
-                <li className="flex items-center">
-                  <Check className="w-5 h-5 text-primary mr-3" />
-                  Teste Gratuito de 14 Dias
-                </li>
               </ul>
               <a
                 href="https://links.upscale.vu/widget/booking/CydNwkofOGSg2NY6lH4M"

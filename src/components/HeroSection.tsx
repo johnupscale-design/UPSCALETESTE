@@ -71,7 +71,7 @@ const HeroSection = () => {
               <div className="media-container">
                 <div className="frontpage-image">
                   <img 
-                    src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/689b8e0ed47b90f01a6b8ad5.png" 
+                    src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/68af523e00de6157ad903a0f.png" 
                     alt="Front Page" 
                   />
                 </div>
