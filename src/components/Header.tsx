@@ -96,11 +96,13 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/45 backdrop-blur-md">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <img 
-            src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/689bc310d757ed4339084bce.png" 
-            alt="Upscale Logo" 
-            className="h-8 w-auto" 
-          />
+          <a href="/" aria-label="Ir para a página inicial">
+            <img 
+              src="https://storage.googleapis.com/msgsndr/bwIqmcdNeNlOPKQFF6DF/media/689bc310d757ed4339084bce.png" 
+              alt="Upscale Logo" 
+              className="h-8 w-auto cursor-pointer" 
+            />
+          </a>
         </div>
         
         <nav className="hidden lg:flex items-center space-x-8">
