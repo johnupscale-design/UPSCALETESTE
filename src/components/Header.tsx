@@ -43,21 +43,21 @@ const Header = () => {
           {/* Navigation Links */}
           <nav className="flex flex-col space-y-6">
             <a 
-              href="#features" 
+              href="/agendamento" 
               onClick={closeMenu}
               className="text-xl font-medium text-gray-800 hover:text-primary transition-colors py-3 border-b border-gray-100"
             >
               Funcionalidades
             </a>
             <a 
-              href="#pricing" 
+              href="/agendamento" 
               onClick={closeMenu}
               className="text-xl font-medium text-gray-800 hover:text-primary transition-colors py-3 border-b border-gray-100"
             >
               Preços
             </a>
             <a 
-              href="#testimonials" 
+              href="/agendamento" 
               onClick={closeMenu}
               className="text-xl font-medium text-gray-800 hover:text-primary transition-colors py-3 border-b border-gray-100"
             >
@@ -70,17 +70,16 @@ const Header = () => {
             <Button 
               variant="outline" 
               className="justify-center text-gray-800 border-gray-300 hover:bg-gray-50 w-full py-3 text-lg"
+              asChild
             >
-              Entrar
+              <a href="/agendamento">Entrar</a>
             </Button>
             <Button
               className="bg-primary hover:bg-primary/90 text-primary-foreground w-full py-3 text-lg font-medium"
               asChild
             >
               <a
-                href="https://links.upscale.vu/widget/survey/oxeRZfpDcbB0zapaYqHl"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/agendamento"
                 onClick={closeMenu}
               >
                 Começar Grátis
@@ -118,8 +117,8 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center space-x-2 sm:space-x-4">
-          <Button variant="ghost" className="hidden lg:inline-flex">
-            Entrar
+          <Button variant="ghost" className="hidden lg:inline-flex" asChild>
+            <a href="/agendamento">Entrar</a>
           </Button>
           {/* Menu hambúrguer - visível apenas no mobile/tablet */}
           <button
@@ -138,13 +137,7 @@ const Header = () => {
             className="hidden lg:inline-flex bg-[#1B1A1A] hover:bg-[#1B1A1A]/90 text-white"
             asChild
           >
-            <a
-              href="https://links.upscale.vu/widget/survey/oxeRZfpDcbB0zapaYqHl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Começar Grátis
-            </a>
+            <a href="/agendamento">Começar Grátis</a>
           </Button>
         </div>
       </div>

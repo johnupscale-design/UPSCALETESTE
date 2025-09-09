@@ -95,8 +95,8 @@ const FeaturesSection = () => {
                   Seguro
                 </div>
               </div>
-              <Button className="text-white hover:bg-[#1B1A1A]/90" style={{ backgroundColor: '#1B1A1A' }}>
-                Crie seu Website Grátis
+              <Button className="text-white hover:bg-[#1B1A1A]/90" style={{ backgroundColor: '#1B1A1A' }} asChild>
+                <a href="/agendamento">Crie seu Website Grátis</a>
               </Button>
             </div>
             <div className="relative order-1 lg:order-2">
@@ -317,8 +317,8 @@ const FeaturesSection = () => {
               
               {/* Botão abaixo da animação */}
               <div className="text-left">
-                <Button className="text-white hover:bg-[#1B1A1A]/90" style={{ backgroundColor: '#1B1A1A' }}>
-                  Começar grátis com IA
+                <Button className="text-white hover:bg-[#1B1A1A]/90" style={{ backgroundColor: '#1B1A1A' }} asChild>
+                  <a href="/agendamento">Começar grátis com IA</a>
                 </Button>
               </div>
             </div>
@@ -338,8 +338,8 @@ const FeaturesSection = () => {
                 Nosso fluxo de agendamento é o mais rápido e intuitivo do mercado. Capture informações 
                 valiosas dos seus leads, envie lembretes automáticos e reduza drasticamente a taxa de faltas.
               </p>
-              <Button className="text-white hover:bg-[#1B1A1A]/90" style={{ backgroundColor: '#1B1A1A' }}>
-                Experimente a Agilidade
+              <Button className="text-white hover:bg-[#1B1A1A]/90" style={{ backgroundColor: '#1B1A1A' }} asChild>
+                <a href="/agendamento">Experimente a Agilidade</a>
               </Button>
             </div>
             <div className="relative">

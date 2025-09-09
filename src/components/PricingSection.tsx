@@ -63,9 +63,7 @@ const PricingSection = () => {
                 </li>
               </ul>
               <a
-                href="https://links.upscale.vu/widget/booking/CydNwkofOGSg2NY6lH4M"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/agendamento"
                 className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 text-center rounded-md py-3 font-bold text-white block transition-all"
               >
                  Iniciar teste de 14 dias

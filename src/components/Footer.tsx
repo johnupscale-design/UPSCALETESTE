@@ -54,27 +54,27 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#features" className="text-gray-300 hover:text-primary transition-colors">
+                <a href="/agendamento" className="text-gray-300 hover:text-primary transition-colors">
                   Funcionalidades
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="text-gray-300 hover:text-primary transition-colors">
+                <a href="/agendamento" className="text-gray-300 hover:text-primary transition-colors">
                   Preços
                 </a>
               </li>
               <li>
-                <a href="#testimonials" className="text-gray-300 hover:text-primary transition-colors">
+                <a href="/agendamento" className="text-gray-300 hover:text-primary transition-colors">
                   Depoimentos
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-primary transition-colors">
+                <a href="/agendamento" className="text-gray-300 hover:text-primary transition-colors">
                   Suporte
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-primary transition-colors">
+                <a href="/agendamento" className="text-gray-300 hover:text-primary transition-colors">
                   Blog
                 </a>
               </li>
@@ -121,13 +121,13 @@ const Footer = () => {
               © 2024 Upscale. Todos os direitos reservados.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-300 hover:text-primary text-sm transition-colors">
+              <a href="/agendamento" className="text-gray-300 hover:text-primary text-sm transition-colors">
                 Política de Privacidade
               </a>
-              <a href="#" className="text-gray-300 hover:text-primary text-sm transition-colors">
+              <a href="/agendamento" className="text-gray-300 hover:text-primary text-sm transition-colors">
                 Termos de Uso
               </a>
-              <a href="#" className="text-gray-300 hover:text-primary text-sm transition-colors">
+              <a href="/agendamento" className="text-gray-300 hover:text-primary text-sm transition-colors">
                 Cookies
               </a>
             </div>

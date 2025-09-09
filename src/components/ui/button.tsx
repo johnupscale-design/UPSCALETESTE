@@ -47,7 +47,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       if (onClick) {
         onClick(e)
       } else if (type !== "submit") {
-        window.location.href = "https://links.upscale.vu/widget/booking/CydNwkofOGSg2NY6lH4M"
+        window.location.href = "https://api.leadconnectorhq.com/widget/booking/L9aalwcym3c2R6jcXdxl"
       }
     }
     return (
