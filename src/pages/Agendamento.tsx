@@ -34,7 +34,7 @@ const Agendamento = () => {
             <p className="font-medium">Você verá uma prévia do <strong>seu próprio site</strong>, não uma demonstração genérica.</p>
           </div>
         </div>
-        <a href="https://links.upscale.vu/widget/booking/CydNwkofOGSg2NY6lH4M" className="w-full block bg-[#252525] text-white text-base py-5 px-8 transition-colors hover:bg-[#3a3a3a] focus:outline-none focus:ring-4 focus:ring-gray-400" target="_blank" rel="noopener noreferrer">
+        <a href="https://api.leadconnectorhq.com/widget/booking/L9aalwcym3c2R6jcXdxl" className="w-full block bg-[#252525] text-white text-base py-5 px-8 transition-colors hover:bg-[#3a3a3a] focus:outline-none focus:ring-4 focus:ring-gray-400">
           Avançar para o Agendamento
         </a>
       </div>
